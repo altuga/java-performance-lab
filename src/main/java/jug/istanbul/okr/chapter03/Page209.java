@@ -14,13 +14,33 @@ public class Page209 {
     }
 
     public static void main(String[] args) {
+
         Page209 page209 = new Page209();
-        page209.print(6);
+        //page209.run();
+       //page209.print(6);
+        System.out.println("\n");
+
+        var name = "James";
+        var score = 90.25;
+        var total = 100;
+        System.out.println("%s:%n Score: %f out of %d"
+                .formatted(name, score, total));
+
+        var str = "Food: %d ".formatted(2.0);
+        System.out.println(str);
     }
 
     public void prove() {
         byte elma = 5;
         short armut = 10;
         int sonuc= elma+ armut;
+    }
+
+    public void run() {
+        int penguin = 50, turtle = 75;
+        boolean older = penguin >= turtle;
+        if (older = true) System.out.println("Success");
+        else System.out.println("Failure");
+
     }
 }
