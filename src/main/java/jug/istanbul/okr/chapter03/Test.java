@@ -7,7 +7,7 @@ public class Test {
     switch (grade) {
         default:
         case a:
-        case 'B':  System.out.print("great ");
+        // case 'B': 'C:' : System.out.print("great ");
         case 'D': System.out.print("good "); break;
         case e:
         case 'F': System.out.print("not good ");    
