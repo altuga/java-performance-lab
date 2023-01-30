@@ -1,7 +1,7 @@
 package jug.istanbul.okr.chapter06;
 
 public class Bonobo {
-    public Bonobo(var  food) { // DOES NOT COMPILE
+    public Bonobo(String  food) { // DOES NOT COMPILE
         System.out.println(food);
     }
 
