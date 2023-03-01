@@ -2,26 +2,15 @@ package jug.istanbul.okr.chapter06;
 
 class Antelope {
 
-
     public Antelope(int p) {
         System.out.print("4");
     }
 
-
-    {
-        System.out.print("2");
-    }
-
-
-    static {
-        System.out.print("1");
-    }
+    {  System.out.print("2"); }    
 
 }
 
-
 public class Gazelle extends Antelope {
-
 
     public Gazelle(int p) {
         super(6);
@@ -32,14 +21,5 @@ public class Gazelle extends Antelope {
         new Gazelle(0);
     }
 
-
-    static {
-        System.out.print("8");
-    }
-
-
-    {
-        System.out.print("9");
-    }
-
+    static { System.out.print("8");}
 }
