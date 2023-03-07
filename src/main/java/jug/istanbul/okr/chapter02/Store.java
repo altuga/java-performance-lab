@@ -1,8 +1,8 @@
 package jug.istanbul.okr.chapter02;
 
 public class Store  {
-    static long add(double fruit, float vegetables) {
-        return (int)fruit + vegetables;
+    static double add(double fruit, float vegetables) {
+        return fruit + vegetables;
     }
 
     public static void main(String[] args) {
