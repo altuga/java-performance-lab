@@ -21,7 +21,6 @@ public class PrintNumbers {
         int height = 2;
         class VolumeCalculator {
             public int multiply() {
-                
                 return length * width * height; // DOES NOT COMPILE
             }
         }
