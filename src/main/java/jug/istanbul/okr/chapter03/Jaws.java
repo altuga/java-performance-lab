@@ -2,14 +2,24 @@ package jug.istanbul.okr.chapter03;
 
 public class Jaws {
 
+    static void getFish(Object fish) {
+        if (!(fish instanceof String guppy))
+            System.out.print("Eat!");
+        else if (!(fish instanceof String puppyy)) {
+            throw new RuntimeException();
+        }
+        System.out.print("Swim!");
+    }
+
+
     public static void main(String[] args) {
+        getFish("goldie");
         int penguin = 50, turtle = 75;
         boolean older = penguin >= turtle;
         if (older = true) System.out.println("Success");
         else System.out.println("Failure");
     }
 
-    
 
     /**
      * F. Line 19 starts with an else statement, but there is no preceding if statement that it
