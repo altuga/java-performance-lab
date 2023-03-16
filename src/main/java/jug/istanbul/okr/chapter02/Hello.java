@@ -38,7 +38,7 @@ public class Hello {
         return (int) input.chars()
                 .filter(c -> c == 'r' || c == 's')
                 .count();
-    }t
+    }
    
 
 
