@@ -9,4 +9,13 @@ public class Skip {
         Skip skip = new Skip();
         System.out.println(skip.skip());
     }
+
+    // write a static metod 
+    // that takes a string as input
+    public void name() {
+        
+    }   
+
+
+    
 }
