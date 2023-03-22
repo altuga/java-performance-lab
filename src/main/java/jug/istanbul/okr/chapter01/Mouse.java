@@ -28,20 +28,27 @@ public class Mouse {
         String line;
         //endregion
 
-
-
+        /**
         try (BufferedReader reader = new BufferedReader(new FileReader(file));){
             strings = reader.lines().filter(l-> !l.isBlank()).filter(l -> l.length() > 3).toList();
-        }
+        }*/
 
 
 
         String hello = "hello";
 
-        for (String string : strings) {
+        for (String string : strings) second();
+    }
 
-        }
+    static void first(){
+        third();
+    }
 
+    static void second(){
+        third();
+    }
 
+    static void third(){
+        System.out.println("third");
     }
 }
