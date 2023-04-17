@@ -1,8 +1,11 @@
 package jug.istanbul.thread_dump;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.stream.Collectors;
 
 public class CompletableFuturePDCA {
 
@@ -17,13 +20,27 @@ public class CompletableFuturePDCA {
                 }, executorService);
 
 
-        CompletableFuture<Void> result = CompletableFuture.allOf(cf1, cf2);
+        CompletableFuture<List<Integer>> result = allOfShortcircuit(List.of(cf1, cf2));
 
         result.join();
 
         executorService.shutdown();
     }
 
+    public static <T> CompletableFuture<List<T>> allOfShortcircuit(List<CompletableFuture<T>> cfs) {
+        CompletableFuture result =
+                CompletableFuture.allOf(cfs.toArray(new CompletableFuture[0]));
+
+        for (CompletableFuture<T> cf : cfs ) {
+            cf.whenComplete((t, throwable) -> {
+                if (throwable != null)  {
+                    result.completeExceptionally(throwable);
+                }
+            });
+        }
+
+        return result.thenApply(__ -> cfs.stream().map(CompletableFuture::join).collect((Collectors.toList())));
+    }
 
     public static int process(int i) {
 
