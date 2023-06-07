@@ -9,7 +9,12 @@ import java.util.stream.Collectors;
 
 public class CompletableFuturePDCA {
 
+
     public static void main(String[] args) {
+        CompletableFuture<Integer> cf1 = new CompletableFuture<>();
+
+    }
+    public static void mainx(String[] args) {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         CompletableFuture<Integer> cf1 =
                 CompletableFuture.supplyAsync(()
