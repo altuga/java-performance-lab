@@ -13,10 +13,17 @@ public class CompletableFuturePDCA {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         CompletableFuture<Integer> cf1 =
                 CompletableFuture.supplyAsync(()
-                        -> process(1), executorService);
+                                -> 42, executorService)
+                        .thenApplyAsync(i ->
+                        {
+                            System.out.println(Thread.currentThread().getName());
+                            return i + 1;
+                        }, executorService)
+                        .thenApply(i -> i + 1)
+                        .thenApply(i -> i + 1);
 
-        CompletableFuture<Integer> cf2 =
-                CompletableFuture.supplyAsync(() -> process2(1), executorService);
+        //CompletableFuture<Integer> cf2 =
+        //        CompletableFuture.supplyAsync(() -> process2(1), executorService);
 
 
         // Hata durumuna Thread hemen hata veriyor.
@@ -24,9 +31,9 @@ public class CompletableFuturePDCA {
         //        allOfShortcircuit(List.of(cf1, cf2));
 
         // Uzun süren Thread i bekliyor, kodu bekliyor
-        CompletableFuture<Void>  result = CompletableFuture.allOf(cf1, cf2);
+        //CompletableFuture<Void>  result = CompletableFuture.allOf(cf1, cf2);
         //result.join();
-        result.thenAccept(System.out::println).join();
+        //result.thenAccept(System.out::println).join();
         executorService.shutdown();
     }
 
@@ -34,9 +41,9 @@ public class CompletableFuturePDCA {
         CompletableFuture result =
                 CompletableFuture.allOf(cfs.toArray(new CompletableFuture[0]));
 
-        for (CompletableFuture<T> cf : cfs ) {
+        for (CompletableFuture<T> cf : cfs) {
             cf.whenComplete((t, throwable) -> {
-                if (throwable != null)  {
+                if (throwable != null) {
                     result.completeExceptionally(throwable);
                 }
             });
