@@ -12,18 +12,21 @@ public class CompletableFuturePDCA {
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         CompletableFuture<Integer> cf1 =
-                CompletableFuture.supplyAsync(() -> process(1), executorService);
+                CompletableFuture.supplyAsync(()
+                        -> process(1), executorService);
 
         CompletableFuture<Integer> cf2 =
-                CompletableFuture.supplyAsync(() -> {
-                    throw new RuntimeException();
-                }, executorService);
+                CompletableFuture.supplyAsync(() -> process2(1), executorService);
 
 
-        CompletableFuture<List<Integer>> result = allOfShortcircuit(List.of(cf1, cf2));
+        // Hata durumuna Thread hemen hata veriyor.
+        //CompletableFuture<List<Integer>> result =
+        //        allOfShortcircuit(List.of(cf1, cf2));
 
-        result.join();
-
+        // Uzun süren Thread i bekliyor, kodu bekliyor
+        CompletableFuture<Void>  result = CompletableFuture.allOf(cf1, cf2);
+        //result.join();
+        result.thenAccept(System.out::println).join();
         executorService.shutdown();
     }
 
@@ -45,14 +48,25 @@ public class CompletableFuturePDCA {
     public static int process(int i) {
 
         try {
-            Thread.sleep(1000000000);
+            Thread.sleep(1000);
+            System.out.println(Thread.currentThread().getName());
             int value = i + 1;
             return value;
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
 
+    public static int process2(int i) {
 
+        try {
+            Thread.sleep(10);
+            System.out.println(Thread.currentThread().getName());
+            int value = i + 1;
+            return value;
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

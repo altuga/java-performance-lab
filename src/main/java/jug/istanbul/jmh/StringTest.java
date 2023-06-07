@@ -24,7 +24,7 @@ public class StringTest {
     @Benchmark
     public void testIntern(Blackhole bh) {
         for (int i = 0; i < 100000; i++) {
-            String s = new String("String to intern " + i);
+            String s = new String("String to intern " );
             String t = s.intern();
             bh.consume(t);
         }
@@ -33,7 +33,7 @@ public class StringTest {
     @Benchmark
     public void testIntern2(Blackhole bh) {
         for (int i = 0; i < 100000; i++) {
-            String s = "String to intern " + i;
+            String s = "String to intern " ;
             bh.consume(s);
         }
     }
