@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
+import static java.math.BigDecimal.valueOf;
+
 class Mukkellef {
 
     Function<BigDecimal, BigDecimal> function;
@@ -28,7 +30,7 @@ public class VergiExample2 {
 
 
     public static void tahakkukHesapla(Mukkellef mukkellef) {
-        System.out.println(mukkellef.ode(BigDecimal.valueOf(10)));
+        System.out.println(mukkellef.ode(valueOf(10)));
     }
     public static void main(String[] args) {
         // Mukkellefê %20 indirim TL KDV
@@ -36,9 +38,10 @@ public class VergiExample2 {
         // Mukkellef %50  ek verginin vergisi
         tahakkukHesapla(
                 new Mukkellef(
-                        bigDecimal -> bigDecimal.multiply(BigDecimal.valueOf(1.60)),
-                        bigDecimal -> bigDecimal.multiply(BigDecimal.valueOf(1.50)),
-                        bigDecimal -> bigDecimal.subtract(bigDecimal.multiply(BigDecimal.valueOf(0.20)))
+                        bigDecimal -> bigDecimal.multiply(valueOf(0.80)),
+                        bigDecimal -> bigDecimal.multiply(valueOf(1.60)),
+                        bigDecimal -> bigDecimal.multiply(valueOf(1.50))
+
                     ));
 
     }
