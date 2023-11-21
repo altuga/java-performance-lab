@@ -49,6 +49,7 @@ public class CameraExample {
         /**
          *  - Function bir iş yapmalı
          *      -  Örneğin bir security işi yapmalı
+         *          - Color gibi bir obje yapılabilir.
          *      -  Daha sonra bunu decore etmelisin
          */
 

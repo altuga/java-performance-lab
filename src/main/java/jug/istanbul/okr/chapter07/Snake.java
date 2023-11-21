@@ -10,10 +10,10 @@ public sealed class Snake permits Cobra {
 final class Cobra extends Snake {
 
     public void printName(Snake snake) {
-        System.out.println(switch (snake) {
-            case Cobra c -> c.getBassName();
-            case Snake s -> s.getTroutName();
-        });
+        //System.out.println(switch (snake) {
+            //case Cobra c -> c.getBassName();
+            // case Snake s -> s.getTroutName();
+        //});
     }
 
     private boolean getBassName() {
