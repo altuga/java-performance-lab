@@ -41,5 +41,15 @@ public class ExecutePattern {
 
     }
 
+    /**
+     * Overuse of pattern results in complexity
+     * The more poweful a language is (or become) the less
+     * we will talk about patterns.
+     *
+     * Natural pattern ,
+     * Pattern mi değil mi düşünme,
+     * dilin içinde özelliklerin oluşturduğu bir ahenk olması önemli
+     */
+
 
 }
