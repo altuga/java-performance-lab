@@ -33,6 +33,7 @@ public class Staff05 {
         totalValue = topla(integerList,  e-> e%2==0);
         System.out.println(" " + totalValue);
 
+        // tek sayilari toplan - strategy pattern
         totalValue = topla(integerList,  e-> e%2!=0);
         System.out.println(" " + totalValue);
 
