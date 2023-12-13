@@ -21,10 +21,16 @@ public class Staff06 {
     }
 
 
+
+
+
     public static void main(String[] args) {
         System.out.println(add(List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), e -> true));
         System.out.println(add(List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), e -> e % 2 == 0));
         System.out.println(add(List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), e -> e % 2 != 0));
+
+
+        //parse("Elma; Armut; Cilek");
 
     }
 
