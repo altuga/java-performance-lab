@@ -38,6 +38,15 @@ public class VergiExample08 {
     public static void main(String[] args) {
 
 
+        TaxPayer osman =  new TaxPayer(
+                tax -> tax.multiply(BigDecimal.valueOf(1.20)),
+                tax -> tax.multiply(BigDecimal.valueOf(1.10)),
+                tax -> tax.multiply(BigDecimal.valueOf(0.95))
+        );
+
+        osman.pay(BigDecimal.valueOf(100));
+
+
 
     }
 }
