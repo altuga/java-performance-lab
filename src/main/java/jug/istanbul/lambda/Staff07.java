@@ -2,26 +2,28 @@ package jug.istanbul.lambda;
 
 import org.apache.commons.math3.primes.Primes;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
+import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class Staff07 {
 
     // Bir dizideki asal sayıları bulan fonksiyon isteniyor
 
 
-    public static void findPrime(List<Integer> values, Predicate<Integer> selector) {
+    public static void findPrime(Set<Integer> values, Predicate<Integer>... selectors) {
 
+        Predicate<Integer> filter = Stream.of(selectors).reduce(Predicate::and).orElse(x->true);
         for(int value : values ) {
-            if (selector.test(value)) {
+
+            if (filter.test(value)) {
                 System.out.println(value);
             }
         }
     }
 
-    public static void findOddAndPrime(List<Integer> values) {
+    public static void findOddAndPrime(Set<Integer> values) {
 
         for(int value : values ) {
             if (Primes.isPrime(value)) {
@@ -33,7 +35,7 @@ public class Staff07 {
         }
     }
 
-    public static void findNonPrime(List<Integer> values) {
+    public static void findNonPrime(Set<Integer> values) {
 
         for(int value : values ) {
             if (!Primes.isPrime(value)) {
@@ -47,19 +49,17 @@ public class Staff07 {
         Random rand = new Random();
 
         // create an instance of the ArrayList class
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        Set<Integer> set = new TreeSet<Integer>();
 
         // test data generation generate random function
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             int randomNumber = rand.nextInt(1000) + 1;
-            list.add(randomNumber);
+            set.add(randomNumber);
         }
 
         // stratejiler
-        Predicate<Integer> selector = e->Primes.isPrime(e);
-        Predicate<Integer> selector2 = e->e%2 ==0;
 
-        findPrime(list, selector.and(selector2) );
+        findPrime(set, e->Primes.isPrime(e),  e->e%2 !=0);
         //System.out.println("--findNonPrime--");
         //findNonPrime(list);
         //System.out.println("--findOddAndPrime--");
