@@ -4,14 +4,14 @@ package jug.istanbul.lambda;
 import java.math.BigDecimal;
 import java.util.function.Function;
 
-class TaxPayer {
+class TaxPayer09 {
 
     Function<BigDecimal, BigDecimal> function;
 
     /*
     add taxes as decarator
      */
-    public TaxPayer(Function<BigDecimal, BigDecimal>... taxes) {
+    public TaxPayer09(Function<BigDecimal, BigDecimal>... taxes) {
         function = e->e;
         for (Function<BigDecimal, BigDecimal> tax: taxes) {
             function = function.andThen(tax);
@@ -38,7 +38,7 @@ public class VergiExample08 {
     public static void main(String[] args) {
 
 
-        TaxPayer osman =  new TaxPayer(
+        TaxPayer09 osman =  new TaxPayer09(
                 tax -> tax.multiply(BigDecimal.valueOf(1.20)),
                 tax -> tax.multiply(BigDecimal.valueOf(1.10)),
                 tax -> tax.multiply(BigDecimal.valueOf(0.95))
