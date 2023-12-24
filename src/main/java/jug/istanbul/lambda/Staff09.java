@@ -1,18 +1,25 @@
 package jug.istanbul.lambda;
 
+import org.apache.commons.lang3.stream.Streams;
 import org.apache.commons.math3.primes.Primes;
 
+import java.util.Arrays;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class Staff09 {
 
 
-    public static void findPrime(Set<Integer> theUniqCase) {
+    public static void findPrime(Set<Integer> theUniqCase, Predicate<Integer> ... predicates) {
+
+       Predicate<Integer> totalPredicate = Stream.of(predicates).reduce(Predicate::and).orElse(e->true);
 
         for (int value :theUniqCase) {
-            if (Primes.isPrime(value)) {
+            if (totalPredicate.test(value)) {
                 System.out.println(value);
             }
         }
@@ -61,11 +68,14 @@ public class Staff09 {
             theUniqList.add(ThreadLocalRandom.current().nextInt(0, 10000));
         }
 
-        findPrime(theUniqList);
+        findPrime(theUniqList,
+                prime -> Primes.isPrime(prime),
+                e-> e%3 != 0);
+
         System.out.println("-----");
-        findOddPrime(theUniqList);
+        //findOddPrime(theUniqList);
         System.out.println("-----");
-        findEvenPrime(theUniqList);
+        //findEvenPrime(theUniqList);
 
     }
 }
