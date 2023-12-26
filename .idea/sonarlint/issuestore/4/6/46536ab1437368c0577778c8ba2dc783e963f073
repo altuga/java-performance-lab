@@ -1,0 +1,16 @@
+
+`	java:S112	"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ
+I
+java:S1121".Extract the assignment out of this expression.(ª±í¹øÿÿÿÿ
+^
+java:S2583"CChange this condition so that it does not always evaluate to "true"(ª±í¹øÿÿÿÿ
+E
+java:S1481"*Remove this unused "guppy" local variable.(ÑåŸ»øÿÿÿÿ
+F
+java:S1481"+Remove this unused "puppyy" local variable.(ºº„±úÿÿÿÿ
+?
+java:S1659"$Declare "turtle" on a separate line.(À·§ùÿÿÿÿ
+E
+java:S1481"*Remove this unused "older" local variable.(§¹Ç³üÿÿÿÿ
+Y
+java:S1659 "CDeclare "squawk" and all following declarations on a separate line.(“ùğ

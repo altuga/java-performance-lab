@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.example.AppTest" time="0.045" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1254"/>
+    <property name="java.class.path" value="D:\Users\alaltintas\IdeaProjects\java-performance-lab\target\test-classes;D:\Users\alaltintas\IdeaProjects\java-performance-lab\target\classes;D:\Users\alaltintas\.m2\repository\junit\junit\4.11\junit-4.11.jar;D:\Users\alaltintas\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\Users\alaltintas\.m2\repository\org\openjdk\jmh\jmh-core\1.28\jmh-core-1.28.jar;D:\Users\alaltintas\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar;D:\Users\alaltintas\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;D:\Users\alaltintas\.m2\repository\org\openjdk\jmh\jmh-generator-annprocess\1.28\jmh-generator-annprocess-1.28.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.4\jackson-databind-2.11.4.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.4\jackson-annotations-2.11.4.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.4\jackson-core-2.11.4.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-xml\2.11.4\jackson-dataformat-xml-2.11.4.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\jackson\module\jackson-module-jaxb-annotations\2.11.4\jackson-module-jaxb-annotations-2.11.4.jar;D:\Users\alaltintas\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;D:\Users\alaltintas\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;D:\Users\alaltintas\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.1\stax2-api-4.2.1.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\woodstox\woodstox-core\6.2.3\woodstox-core-6.2.3.jar;D:\Users\alaltintas\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;"/>
+    <property name="java.vm.vendor" value="Red Hat, Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://access.redhat.com/"/>
+    <property name="user.timezone" value="Europe/Istanbul"/>
+    <property name="user.country.format" value="TR"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="D:\java_versions\java-17-openjdk-17.0.6.0.10-1.win.x86_64\bin"/>
+    <property name="sun.java.command" value="D:\Users\ALALTI~1\AppData\Local\Temp\surefire12043397830091950071\surefirebooter3365375553561630957.jar D:\Users\alaltintas\AppData\Local\Temp\surefire12043397830091950071 2023-07-27T17-42-54_551-jvmRun1 surefire12699481887222232070tmp surefire_02242682243161771707tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\Users\alaltintas\IdeaProjects\java-performance-lab\target\test-classes;D:\Users\alaltintas\IdeaProjects\java-performance-lab\target\classes;D:\Users\alaltintas\.m2\repository\junit\junit\4.11\junit-4.11.jar;D:\Users\alaltintas\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\Users\alaltintas\.m2\repository\org\openjdk\jmh\jmh-core\1.28\jmh-core-1.28.jar;D:\Users\alaltintas\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar;D:\Users\alaltintas\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;D:\Users\alaltintas\.m2\repository\org\openjdk\jmh\jmh-generator-annprocess\1.28\jmh-generator-annprocess-1.28.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.4\jackson-databind-2.11.4.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.4\jackson-annotations-2.11.4.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.4\jackson-core-2.11.4.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-xml\2.11.4\jackson-dataformat-xml-2.11.4.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\jackson\module\jackson-module-jaxb-annotations\2.11.4\jackson-module-jaxb-annotations-2.11.4.jar;D:\Users\alaltintas\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;D:\Users\alaltintas\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;D:\Users\alaltintas\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.1\stax2-api-4.2.1.jar;D:\Users\alaltintas\.m2\repository\com\fasterxml\woodstox\woodstox-core\6.2.3\woodstox-core-6.2.3.jar;D:\Users\alaltintas\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="D:\Users\alaltintas"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="D:\java_versions\java-17-openjdk-17.0.6.0.10-1.win.x86_64"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\Users\alaltintas\IdeaProjects\java-performance-lab"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="D:\Users\ALALTI~1\AppData\Local\Temp\surefire12043397830091950071\surefirebooter3365375553561630957.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.6+10-LTS"/>
+    <property name="user.name" value="alaltintas"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1254"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="(Red_Hat-17.0.6.0+10-1)"/>
+    <property name="localRepository" value="D:\Users\alaltintas\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugzilla.redhat.com/enter_bug.cgi"/>
+    <property name="java.io.tmpdir" value="D:\Users\ALALTI~1\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2022.3.1"/>
+    <property name="java.version" value="17.0.6"/>
+    <property name="user.dir" value="D:\Users\alaltintas\IdeaProjects\java-performance-lab"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.language.format" value="tr"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1254"/>
+    <property name="java.library.path" value="D:\java_versions\java-17-openjdk-17.0.6.0.10-1.win.x86_64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jre1.8.0_251\bin;C:\Program Files\Java\jre1.8.0_251\bin;C:\Program Files\Java\jre1.8.0_251\bin;C:\Program Files\Java\jre1.8.0_251\bin;C:\Program Files\Java\jre1.8.0_251\bin;C:\WINDOWS\CCM\;C:\Program Files\Java\jre1.8.0_251\bin;C:\Program Files\Java\jre1.8.0_251\bin;C:\Windows\CCM\;c:\oracle\product\19.0.0\client_1\bin;C:\oracle\11.2.0\client_1;C:\oracle\11.2.0\client_1\bin;c:\oracle\11.1\BIN;c:\oracle\orant\bin;c:\pbdk;c:\programdata\oracle\java\javapath;C:\Program Files (x86)\Enterprise Vault\EVClient\x64\;c:\program files;c:\program files\java\jre1.8.0_161\bin;c:\program files (x86)\java\jre1.8.0_161\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Windows\system32\windowspowershell\v1.0\;C:\Windows\CCM;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\1;C:\Program Files (x86)\dotnet\;D:\Users\alaltintas\AppData\Local\Microsoft\WindowsApps;&quot;D:\Users\alaltintas\AppData\Local\Programs\Microsoft VS Code\bin;D:\java-11-openjdk-11.0.5.10-2.windows.redhat.x86_64\bin\&quot;;D:\Users\alaltintas\AppData\Local\Programs\Git\cmd;D:\Users\alaltintas\AppData\Local\Programs\Microsoft VS Code\bin;D:\java_versions\vscode;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Red Hat, Inc."/>
+    <property name="java.vm.version" value="17.0.6+10-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="shouldAnswerWithTrue" classname="org.example.AppTest" time="0.002"/>
+</testsuite>

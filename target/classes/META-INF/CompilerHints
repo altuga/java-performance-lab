@@ -1,0 +1,16 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,jug/istanbul/jmh/ExceptionTest.justRun
+inline,jug/istanbul/jmh/ExceptionTest.runWithException
+inline,jug/istanbul/jmh/LoopTest.justString
+inline,jug/istanbul/jmh/LoopTest.justStringWithNew
+inline,jug/istanbul/jmh/MyBenchmark.init
+inline,jug/istanbul/jmh/StringConcatenationTest.testStringAdd
+inline,jug/istanbul/jmh/StringConcatenationTest.testStringBuffer
+inline,jug/istanbul/jmh/StringTest.testIntern
+inline,jug/istanbul/jmh/StringTest.testIntern2
+inline,jug/istanbul/jmh/SumTest.sum
+inline,jug/istanbul/jmh/SumTest.sumPrimitive

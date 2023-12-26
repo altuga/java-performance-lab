@@ -1,0 +1,16 @@
+
+q
+java:S1104"OMake MAX a static final constant or non-public and provide accessors if needed.(·…¼ÿÿÿÿÿ8Ô±ˆØë0
+K
+java:S1444")Make this "public static MAX" field final(·…¼ÿÿÿÿÿ8Õ±ˆØë0
+W
+java:S1610"5Convert the abstract class "Whale" into an interface.(‘Ï‹Çıÿÿÿÿ8Ş±ˆØë0
+G
+java:S1481"*Remove this unused "whale" local variable.(ğŸ¹Ç8å±ˆØë0
+]	java:S125	"<This block of commented-out lines of code should be removed.(Ç„ÏÈûÿÿÿÿ8å±ˆØë0
+p
+java:S3008"NRename this field "MAX" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·…¼ÿÿÿÿÿ8æ±ˆØë0
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(·…¼ÿÿÿÿÿ8ğ±ˆØë0
+I
+java:S1172",Remove this unused method parameter "depth".(Ö‘Ëº8ó±ˆØë0
