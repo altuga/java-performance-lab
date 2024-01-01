@@ -1,14 +1,0 @@
-
-Q	java:S125"<This block of commented-out lines of code should be removed.(îÃêª
-E
-java:S1197#"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
-W
-java:S1612&"<Replace this lambda with method reference 'Color::brighter'.(î‰™Èşÿÿÿÿ
-l
-java:S4276+"VRefactor this code to use the more specialised Functional Interface 'IntUnaryOperator'(óËş¢
-Q	java:S125)"<This block of commented-out lines of code should be removed.(­¢Ó¦
-2
-java:S1116+"Remove this empty statement.(óËş¢
-V	java:S125,"<This block of commented-out lines of code should be removed.(Äƒ“êøÿÿÿÿ
-K
-java:S1128"5Remove this unused import 'java.util.logging.Filter'.(ÌòÀÍ

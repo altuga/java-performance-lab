@@ -1,18 +1,0 @@
-
-b
-java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(¢µ»
-b
-java:S1845"LRename method "Var" to prevent any misunderstanding/clash with method "var".(¢µ»
-S
-java:S6213"8Rename this method to not match a restricted identifier.(“¾ÁÒúÿÿÿÿ
-O
-java:S6213":Rename this variable to not match a restricted identifier.(Ë½
-=
-java:S1481"(Remove this unused "var" local variable.(Ë½
-c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢µ»
-U
-java:S6213	":Rename this variable to not match a restricted identifier.(şş†¡ÿÿÿÿÿ
-C
-java:S1481	"(Remove this unused "var" local variable.(şş†¡ÿÿÿÿÿ
-E
-java:S1197"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
